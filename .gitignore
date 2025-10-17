@@ -1,1 +1,30 @@
+# Build artifacts
 /target
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Rust specific
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
