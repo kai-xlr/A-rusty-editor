@@ -1,14 +1,7 @@
-use std::io::{self, Read};
-use crossterm::terminal::enable_raw_mode;
-use crossterm::terminal::disable_raw_mode;
+mod editor;
+use editor::Editor 
 
 fn main() {
-    for b in io::stdin().bytes() {
-        enable_raw_mode().unwrap();
-        let c = b.unwrap() as char;
-        println!("{}", c);
-        if c == 'q' {
-            break;
-        }
-    }
+    let editor = Editor::default();
+    editor.run();
 }
